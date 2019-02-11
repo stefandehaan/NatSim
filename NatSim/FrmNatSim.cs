@@ -14,8 +14,8 @@ namespace NatSim
 
     public partial class FrmNatSim : Form
     {
-        Graphics papier;
-
+         Graphics papier;
+        
         public FrmNatSim()
         {
            
