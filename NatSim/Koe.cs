@@ -23,21 +23,24 @@ namespace NatSim
 
 
         private Size _afmetingen = new Size(80, 40);
+        private double _gewichtMaximaal = 450;
         private List<string> _wordtVergeiftigdDoor =
                 new List<string>() { "Venijnboom, Vingehoedskruid" };
+
         private string _latijnseNaam = "Bos taurus";
         private int _levensduur = 25;
+        private string _nederlandseNaam = "Koe";
         private Timer _verouder = new Timer();
         private bool _verwijderd = false;
 
         public Size Afmetingen { get { return _afmetingen; } }
-        private double _gewichtMaximaal = 450;
-
-        public double GewichtMaximaal {
-            get { return _gewichtMaximaal; }
-        }
-
-        public int MyProperty { get; private set; }
+        public double GewichtMaximaal { get { return _gewichtMaximaal; } }
+        public List<string> WordtVergiftigdDoor { get { return _wordtVergeiftigdDoor; } }
+        public string LatijnseNaam { get { return _latijnseNaam; } }
+        public int Levensduur { get { return _levensduur; } }
+        public string NederlandseNaam { get { return _nederlandseNaam; } }
+        public Timer Verouder { get { return _verouder; } }
+        public bool Verwijderd { get { return _verwijderd; } }
 
     }
 }

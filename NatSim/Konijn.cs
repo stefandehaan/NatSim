@@ -64,6 +64,40 @@ namespace NatSim
         public List<string> WordtVergiftigdDoor { get { return _wordtVergeiftigdDoor; } }
         public Timer Verouder { get { return _verouder; } }
 
+        // methods
+
+        public void Verwijder()
+        {
+            _verwijderd = true;
+        }
+
+        // private methods
+
+        private bool honger()
+        {
+            return (MaagGevuld < 25);
+        }
+
+        private void eetGras(Gras voedsel)
+        {
+            if (WordtVergiftigdDoor.Contains(voedsel.NederlandseNaam))
+            {
+                if (honger())
+                {
+                    Verwijder();
+                }
+            }
+            else if (MaagGevuld < 100)
+            {
+                MaagGevuld = MaagGevuld + voedsel.Voedingswaarde
+                if (true)
+                {
+
+                }
+            }
+        }
+
+       
 
     }
 }

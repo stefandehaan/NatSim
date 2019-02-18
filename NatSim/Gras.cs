@@ -10,6 +10,7 @@ namespace NatSim
 {
     public class Gras
     {
+
     }
 
     public enum Bloeiwijze
