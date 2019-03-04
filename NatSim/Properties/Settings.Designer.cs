@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NatSim.Properties {
+namespace NatSimII.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

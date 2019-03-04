@@ -1,8 +1,8 @@
-﻿namespace NatSim
+﻿namespace NatSimII
 {
     using System.Windows.Forms;
 
-    partial class FrmNatSim
+    partial class FrmNatSimII
     {
         /// <summary>
         /// Required designer variable.

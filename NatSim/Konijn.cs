@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace NatSim
+namespace NatSimII
 {
     public class Konijn
     {

@@ -8,15 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NatSim
+namespace NatSimII
 {
    
 
-    public partial class FrmNatSim : Form
+    public partial class FrmNatSimII : Form
     {
          Graphics papier;
         
-        public FrmNatSim()
+        public FrmNatSimII()
         {
            
             InitializeComponent();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NatSim
+namespace NatSimII
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace NatSim
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmNatSim());
+            Application.Run(new FrmNatSimII());
         }
     }
 }

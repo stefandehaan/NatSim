@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Timers;
-namespace NatSim
+namespace NatSimII
 {
     public class Venijnboom
     {

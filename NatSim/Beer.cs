@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Timers;
 
-namespace NatSim
+namespace NatSimII
 {
     public class Beer
     {

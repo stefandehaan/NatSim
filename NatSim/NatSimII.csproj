@@ -48,11 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beer.cs" />
-    <Compile Include="FrmNatSim.cs">
+    <Compile Include="FrmNatSimII.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmNatSim.Designer.cs">
-      <DependentUpon>FrmNatSim.cs</DependentUpon>
+    <Compile Include="FrmNatSimII.Designer.cs">
+      <DependentUpon>FrmNatSimII.cs</DependentUpon>
     </Compile>
     <Compile Include="Gras.cs" />
     <Compile Include="Koe.cs" />
@@ -60,10 +60,11 @@
     <Compile Include="Lynx.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Snelheid.cs" />
     <Compile Include="Venijnboom.cs" />
     <Compile Include="Vingerhoedskruid.cs" />
-    <EmbeddedResource Include="FrmNatSim.resx">
-      <DependentUpon>FrmNatSim.cs</DependentUpon>
+    <EmbeddedResource Include="FrmNatSimII.resx">
+      <DependentUpon>FrmNatSimII.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />

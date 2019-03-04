@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NatSim.Properties {
+namespace NatSimII.Properties {
     using System;
     
     
