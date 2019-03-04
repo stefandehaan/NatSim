@@ -10,6 +10,23 @@ namespace NatSim
 {
     public class Gras
     {
+
+        private void initClass(Point locatie)
+        {
+            Locatie = locatie;
+            Verouder.Start();
+        }
+
+        public Gras(Color kleur)
+        {
+            initClass(new Point(0, 0));
+        }
+
+        public Gras(Point loactie)
+        {
+            initClass(loactie);
+        }
+
         public double aantalKubiekeMetersHout;
 
         private Size _Afmetingen = new Size(10, 400);
@@ -22,7 +39,11 @@ namespace NatSim
         public List<string> GeneesmiddelVoor { get { return _GeneesmiddelVoor; } }
 
         private Color _Kleur = Color.ForestGreen;
-        public Color Kleur { get { return _Kleur; } }
+        public Color Kleur
+        {
+            get { return _Kleur; }
+            set => this._Kleur = value;
+        }
 
         private string _LatijnseNaam = "Taxus bacatta";
         public string LatijnseNaam { get { return _LatijnseNaam; } }
@@ -101,4 +122,4 @@ namespace NatSim
         thyrsus,
         kegel
     }
-}
+

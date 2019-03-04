@@ -1,60 +1,76 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Threading.Tasks;
 using System.Timers;
 namespace NatSim
 {
-    public class Venijnboom {
+    public class Venijnboom
+    {
+
+        private void initClass(Point locatie)
+        {
+            Locatie = locatie;
+            Verouder.Start();
+        }
+
+        public Venijnboom()
+        {
+            initClass(new Point(0, 0));
+        }
+
+        public Venijnboom(Point loactie)
+        {
+            initClass(loactie);
+        }
+
         public double aantalKubiekeMetersHout;
 
         private Size _Afmetingen = new Size(10, 400);
-        public Size Afmetingen { get { return _Afmetingen; } }
+        public Size Afmetingen => _Afmetingen;
 
-        private Bloeiwijze _BloeiwijzePlant = Bloeiwijze.kegel;
-        public Bloeiwijze BloeiwijzePlant { get { return _BloeiwijzePlant; } }
+        private readonly Bloeiwijze _BloeiwijzePlant = Bloeiwijze.kegel;
+        public Bloeiwijze BloeiwijzePlant => _BloeiwijzePlant;
 
-        private List<string> _GeneesmiddelVoor = new List<string>(){"longkanker,borstkanker"};
-        public List<string> GeneesmiddelVoor { get { return _GeneesmiddelVoor; } }
+        private readonly List<string> _GeneesmiddelVoor = new List<string>() { "longkanker, borstkanker" };
+        public List<string> GeneesmiddelVoor => _GeneesmiddelVoor;
 
-        private Color _Kleur = Color.ForestGreen;
-        public Color Kleur { get { return _Kleur; } }
+        private readonly Color _Kleur = Color.ForestGreen;
+        public Color Kleur => _Kleur;
 
-        private string _LatijnseNaam = "Taxus bacatta";
-        public string LatijnseNaam { get { return _LatijnseNaam; } }
+        private readonly string _LatijnseNaam = "Taxus bacatta";
+        public string LatijnseNaam => _LatijnseNaam;
 
         public int Leeftijd;
 
-        private int _Levensduur = 2200;
-        public int Levensduur { get { return _Levensduur; } }
+        private readonly int _Levensduur = 2200;
+        public int Levensduur => _Levensduur;
 
         public Point Locatie;
 
-        private int _MaximaleGrootte = 20000;
+        private readonly int _MaximaleGrootte = 20000;
 
-        public int MaximaleGrootte { get { return _MaximaleGrootte; } }
+        public int MaximaleGrootte => _MaximaleGrootte;
 
-        private string _NederlandseNaam = "Venijnboom";
-        public string NederlandseNaam { get { return _NederlandseNaam; } }
+        private readonly string _NederlandseNaam = "Venijnboom";
+        public string NederlandseNaam => _NederlandseNaam;
 
-        private Timer _Verouder = new Timer(1000);
-        public Timer Verouder {  get { return _Verouder; } }
+        private readonly Timer _Verouder = new Timer(1000);
+        public Timer Verouder => _Verouder;
         private bool _verwijderd = false;
 
 
-        private bool _Verwijderd = false;
-        public bool Verwijderd { get { return _Verwijderd;  } }
+        private readonly bool _Verwijderd = false;
+        public bool Verwijderd => _Verwijderd;
 
-        private int _Voedingswaarde;
-        public int Voedingswaarde { get { return _Voedingswaarde; } }
+        private readonly int _Voedingswaarde;
+        public int Voedingswaarde => _Voedingswaarde;
 
-        public void Verwijder() {
+        public void Verwijder()
+        {
             _verwijderd = true;
         }
 
-        public void Teken(Graphics graphics) {
+        public void Teken(Graphics graphics)
+        {
             Pen pen = new Pen(Color.Black, 2);
             int startHoogte = Locatie.Y - Afmetingen.Height;
             graphics.DrawRectangle(pen, Locatie.X, startHoogte, Afmetingen.Width, Afmetingen.Height);

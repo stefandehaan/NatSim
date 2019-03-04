@@ -48,5 +48,52 @@ namespace NatSim
             ResizeLblInformatie();
         }
 
+  
+
+        private void TekenDier(Point positie)
+        {
+            if (this.rdbKonijn.Checked)
+            {
+                Konijn Konijn01 = new Konijn(positie, "Flappie", Color.Brown);
+                Konijn01.Teken(this.pbWereld.CreateGraphics());
+            }
+            else if (this.rdbKoe.Checked)
+            {
+                Koe Koe01 = new Koe(positie, "Bella", Color.Black);
+                Koe01.Teken(this.pbWereld.CreateGraphics());
+            }
+            
+        }
+
+        private void TekenPlant(Point positie)
+        {
+            if (this.rdbGras.Checked)
+            {
+                Gras gras = new Gras(positie);
+                gras.Teken(this.pbWereld.CreateGraphics());
+            }
+            else if (this.rdbVenijnboom.Checked)
+            {
+                Venijnboom venijnboom = new Venijnboom(positie);
+                venijnboom.Teken(this.pbWereld.CreateGraphics());
+            }
+        }
+
+        private void pbWereld_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pbWereld_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                TekenDier(e.Location);
+            }
+            else if (e.Button == MouseButtons.Right)
+            {
+                TekenPlant(e.Location);
+            }
+         
+        }
     }
 }

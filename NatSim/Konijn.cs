@@ -10,6 +10,31 @@ namespace NatSim
 {
     public class Konijn
     {
+
+        private void initClass(Point locatie, string naam, Color kleur)
+        {
+            Locatie = locatie;
+            Naam = naam;
+            Kleur = kleur;
+            Verouder.Start();
+        }
+
+        public Konijn()
+        {
+            initClass(new Point(0,0), "", Kleur );
+        }
+
+        public Konijn(Point locatie)
+        {
+            initClass(locatie, "", Kleur);
+        }
+
+        public Konijn(Point locatie, string naam, Color kleur)
+        {
+            initClass(locatie, naam, kleur);
+        }
+
+
         private string _latijnseNaam = "Oryctolagus cuniculus";
 
         private string _nederlandseNaam = "Konijn";

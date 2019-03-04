@@ -1,5 +1,7 @@
 ﻿namespace NatSim
 {
+    using System.Windows.Forms;
+
     partial class FrmNatSim
     {
         /// <summary>
@@ -198,6 +200,8 @@
             this.pbWereld.Size = new System.Drawing.Size(340, 367);
             this.pbWereld.TabIndex = 6;
             this.pbWereld.TabStop = false;
+            this.pbWereld.Click += new System.EventHandler(this.pbWereld_Click);
+            this.pbWereld.MouseClick += new MouseEventHandler(this.pbWereld_MouseClick);
             // 
             // pnlKnoppen
             // 

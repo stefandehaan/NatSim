@@ -10,6 +10,30 @@ namespace NatSim
 {
     public class Koe
     {
+
+        private void initClass(Point locatie, string naam, Color kleur)
+        {
+            Locatie = locatie;
+            Naam = naam;
+            Kleur = kleur;
+            Verouder.Start();
+        }
+
+        public Koe()
+        {
+            initClass(new Point(0, 0), "", Kleur);
+        }
+
+        public Koe(Point locatie)
+        {
+            initClass(locatie, "", Kleur);
+        }
+
+        public Koe(Point locatie, string naam, Color kleur)
+        {
+            initClass(locatie, naam, kleur);
+        }
+
         public string Naam { get; set; }
         public DateTime Geboortedatum { get; set; }
         public double Gewicht { get; set; }
