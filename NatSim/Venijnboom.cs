@@ -41,6 +41,7 @@ namespace NatSim
 
         private Timer _Verouder = new Timer(1000);
         public Timer Verouder {  get { return _Verouder; } }
+        private bool _verwijderd = false;
 
 
         private bool _Verwijderd = false;
@@ -48,5 +49,22 @@ namespace NatSim
 
         private int _Voedingswaarde;
         public int Voedingswaarde { get { return _Voedingswaarde; } }
+
+        public void Verwijder() {
+            _verwijderd = true;
+        }
+
+        public void Teken(Graphics graphics) {
+            Pen pen = new Pen(Color.Black, 2);
+            int startHoogte = Locatie.Y - Afmetingen.Height;
+            graphics.DrawRectangle(pen, Locatie.X, startHoogte, Afmetingen.Width, Afmetingen.Height);
+
+            pen.Dispose();
+
+            SolidBrush kwast = new SolidBrush(Kleur);
+            graphics.FillRectangle(kwast, Locatie.X, startHoogte, Afmetingen.Width, Afmetingen.Height);
+
+            kwast.Dispose();
+        }
     }
 }

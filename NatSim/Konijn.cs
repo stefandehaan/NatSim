@@ -87,17 +87,50 @@ namespace NatSim
                     Verwijder();
                 }
             }
-            else if (MaagGevuld < 100)
-            {
-                MaagGevuld = MaagGevuld + voedsel.Voedingswaarde
-                if (true)
-                {
+                else if (MaagGevuld< 100) {
+                MaagGevuld = MaagGevuld + voedsel.Voedingswaarde;
 
+                if(MaagGevuld > 100) {
+                    MaagGevuld = 100;
                 }
+                voedsel.Verwijder();
+            }
+        }
+        private void eetVenijnBoom(Venijnboom voedsel) {
+            if (WordtVergiftigdDoor.Contains(voedsel.NederlandseNaam)) {
+                if (honger()) {
+                    Verwijder();
+                }
+            } else if (MaagGevuld < 100) {
+                MaagGevuld = MaagGevuld + voedsel.Voedingswaarde;
+
+                if(MaagGevuld > 100) {
+                    MaagGevuld = 100;
+                }
+                voedsel.Verwijder();
             }
         }
 
-       
+        public void Eet(object voedsel) {
+            if(voedsel.GetType() == typeof(Gras)) {
+                eetGras((Gras)voedsel);
+            }
+            else if (voedsel.GetType() == typeof(Venijnboom)) {
+                eetVenijnBoom((Venijnboom)voedsel);
+            }
+        }
 
+        public void Teken(Graphics graphics) {
+            Pen pen = new Pen(Color.Black, 2);
+            int startHoogte = Locatie.Y - Afmetingen.Height;
+            graphics.DrawRectangle(pen, Locatie.X, startHoogte, Afmetingen.Width, Afmetingen.Height);
+
+            pen.Dispose();
+
+            SolidBrush kwast = new SolidBrush(Kleur);
+            graphics.FillRectangle(kwast, Locatie.X, startHoogte, Afmetingen.Width, Afmetingen.Height);
+
+            kwast.Dispose();
+        }
     }
 }
