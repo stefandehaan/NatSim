@@ -8,7 +8,20 @@ using System.Timers;
 
 namespace NatSimII
 {
-    public class Vingerhoedskruid
+    public class Vingerhoedskruid : Plant
     {
+        private Bloeiwijze _bloeiwijzePlant;
+        private string _latijnseNaam;
+        private int _leeftijd = 4;
+        private int verhoudingTicksJaren = 4;
+
+        public Vingerhoedskruid()
+        {
+
+        }
+        public Vingerhoedskruid(Point locatie)
+        {
+            initClass(locatie);
+        }
     }
 }

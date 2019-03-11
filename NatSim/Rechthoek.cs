@@ -4,11 +4,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NatSimII;
 
-namespace NatSim
+namespace NatSimII
 {
-    class Rechthoek
+    class Rechthoek : Grafischobject
     {
         public Rechthoek() { }
         public Rechthoek(Point locatie, Size afmetingen)
