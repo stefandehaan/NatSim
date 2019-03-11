@@ -54,12 +54,14 @@
     <Compile Include="FrmNatSimII.Designer.cs">
       <DependentUpon>FrmNatSimII.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grafischobject.cs" />
     <Compile Include="Gras.cs" />
     <Compile Include="Koe.cs" />
     <Compile Include="Konijn.cs" />
     <Compile Include="Lynx.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rechthoek.cs" />
     <Compile Include="Snelheid.cs" />
     <Compile Include="Venijnboom.cs" />
     <Compile Include="Vingerhoedskruid.cs" />
