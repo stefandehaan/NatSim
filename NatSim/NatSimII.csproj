@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Grafischobject.cs" />
     <Compile Include="Gras.cs" />
+    <Compile Include="IBewegendObject.cs" />
     <Compile Include="Koe.cs" />
     <Compile Include="Konijn.cs" />
     <Compile Include="Leven.cs" />
