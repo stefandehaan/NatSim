@@ -13,7 +13,7 @@ namespace NatSimII
         {
             initClass(1, "", int.MaxValue);
         }
-        public Leven(int verhoudingTicksJaren, latijnseNaam, levensduur)
+        public Leven(int verhoudingTicksJaren, string latijnseNaam, int levensduur)
         {
             initClass(verhoudingTicksJaren, latijnseNaam, levensduur);
         }
@@ -42,6 +42,10 @@ namespace NatSimII
         public double Levensduur { get { return _levensduur; } }
         public string NederlandseNaam { get { return this.ToString().Split('.').Last(); } }
         public Timer Verouder { get { return _verouder; } }
+
+        public bool IsPlant {
+            get { return this.GetType().IsSubclassOf(typeof(Plant)); }
+        }
 
         // methoden
         public void Sterf()

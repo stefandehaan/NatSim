@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace NatSimII {
 
-    enum Vlak {
+    public enum Vlak {
         Horizontaal,
         Verticaal,
         Hoek,
         Geen,
     }
 
-    struct Snelheid {
+    public struct Snelheid {
 
         public int X;
         public int Y;

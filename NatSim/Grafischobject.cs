@@ -59,14 +59,14 @@ namespace NatSimII
             Wiskleur = Color.PaleGoldenrod;
 
             //graphische instellingen:
-            Tekengebied = new Rechthoek();
+            this.Tekengebied = new Rechthoek();
 
             _id = Guid.NewGuid();
         }
 
         public void Verwijder()
         {
-            _verwijderd = true;
+            this._verwijderd = true;
             Wis();
         }
         public void Wis()

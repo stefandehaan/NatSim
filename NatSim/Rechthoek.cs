@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NatSimII
 {
-    class Rechthoek : Grafischobject
+    public class Rechthoek : Grafischobject
     {
         public Rechthoek() { }
         public Rechthoek(Point locatie, Size afmetingen)

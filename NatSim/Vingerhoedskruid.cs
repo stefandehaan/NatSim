@@ -6,22 +6,23 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace NatSimII
-{
-    public class Vingerhoedskruid : Plant
-    {
+namespace NatSimII {
+    public class Vingerhoedskruid : Plant {
         private Bloeiwijze _bloeiwijzePlant;
         private string _latijnseNaam;
         private int _leeftijd = 4;
         private int verhoudingTicksJaren = 4;
 
-        public Vingerhoedskruid()
-        {
+        public Vingerhoedskruid() {
 
         }
-        public Vingerhoedskruid(Point locatie)
-        {
+        public Vingerhoedskruid(Point locatie) {
             initClass(locatie);
         }
+
+        private void initClass(Point locatie) {
+
+        }
+
     }
 }
