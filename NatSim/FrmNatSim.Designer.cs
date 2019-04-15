@@ -30,262 +30,122 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grbDieren = new System.Windows.Forms.GroupBox();
-            this.rdbBeer = new System.Windows.Forms.RadioButton();
-            this.rdbLynx = new System.Windows.Forms.RadioButton();
-            this.rdbKoe = new System.Windows.Forms.RadioButton();
-            this.rdbKonijn = new System.Windows.Forms.RadioButton();
-            this.grbPlanten = new System.Windows.Forms.GroupBox();
-            this.chbZaai = new System.Windows.Forms.CheckBox();
-            this.rdbVingerhoedskruid = new System.Windows.Forms.RadioButton();
-            this.rdbVenijnboom = new System.Windows.Forms.RadioButton();
-            this.rdbGras = new System.Windows.Forms.RadioButton();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.lblInformatie = new System.Windows.Forms.Label();
-            this.pbWereld = new System.Windows.Forms.PictureBox();
-            this.pnlKnoppen = new System.Windows.Forms.Panel();
-            this.btnEinde = new System.Windows.Forms.Button();
-            this.hsbSnelheid = new System.Windows.Forms.HScrollBar();
-            this.label2 = new System.Windows.Forms.Label();
-            this.grbDieren.SuspendLayout();
-            this.grbPlanten.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWereld)).BeginInit();
-            this.pnlKnoppen.SuspendLayout();
+            this.pnlDeligateAanmaken = new System.Windows.Forms.Panel();
+            this.txtUitvoerGetallen = new System.Windows.Forms.TextBox();
+            this.btnSchrijfWijzes = new System.Windows.Forms.Button();
+            this.pnlDeligateToepassing = new System.Windows.Forms.Panel();
+            this.btnTerugMelding = new System.Windows.Forms.Button();
+            this.lblTerugMelding = new System.Windows.Forms.Label();
+            this.lblTussenResultaat = new System.Windows.Forms.Label();
+            this.progressbar = new System.Windows.Forms.ProgressBar();
+            this.pnlDeligateAanmaken.SuspendLayout();
+            this.pnlDeligateToepassing.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grbDieren
+            // pnlDeligateAanmaken
             // 
-            this.grbDieren.BackColor = System.Drawing.Color.BurlyWood;
-            this.grbDieren.Controls.Add(this.rdbBeer);
-            this.grbDieren.Controls.Add(this.rdbLynx);
-            this.grbDieren.Controls.Add(this.rdbKoe);
-            this.grbDieren.Controls.Add(this.rdbKonijn);
-            this.grbDieren.Location = new System.Drawing.Point(12, 12);
-            this.grbDieren.Name = "grbDieren";
-            this.grbDieren.Size = new System.Drawing.Size(119, 192);
-            this.grbDieren.TabIndex = 0;
-            this.grbDieren.TabStop = false;
-            this.grbDieren.Text = "Dieren";
+            this.pnlDeligateAanmaken.Controls.Add(this.txtUitvoerGetallen);
+            this.pnlDeligateAanmaken.Controls.Add(this.btnSchrijfWijzes);
+            this.pnlDeligateAanmaken.Location = new System.Drawing.Point(22, 52);
+            this.pnlDeligateAanmaken.Name = "pnlDeligateAanmaken";
+            this.pnlDeligateAanmaken.Size = new System.Drawing.Size(284, 173);
+            this.pnlDeligateAanmaken.TabIndex = 0;
             // 
-            // rdbBeer
+            // txtUitvoerGetallen
             // 
-            this.rdbBeer.AutoSize = true;
-            this.rdbBeer.BackColor = System.Drawing.Color.BurlyWood;
-            this.rdbBeer.Location = new System.Drawing.Point(7, 92);
-            this.rdbBeer.Name = "rdbBeer";
-            this.rdbBeer.Size = new System.Drawing.Size(47, 17);
-            this.rdbBeer.TabIndex = 3;
-            this.rdbBeer.Text = "Beer";
-            this.rdbBeer.UseVisualStyleBackColor = false;
+            this.txtUitvoerGetallen.Location = new System.Drawing.Point(109, 17);
+            this.txtUitvoerGetallen.Multiline = true;
+            this.txtUitvoerGetallen.Name = "txtUitvoerGetallen";
+            this.txtUitvoerGetallen.Size = new System.Drawing.Size(172, 143);
+            this.txtUitvoerGetallen.TabIndex = 1;
             // 
-            // rdbLynx
+            // btnSchrijfWijzes
             // 
-            this.rdbLynx.AutoSize = true;
-            this.rdbLynx.BackColor = System.Drawing.Color.BurlyWood;
-            this.rdbLynx.Location = new System.Drawing.Point(7, 68);
-            this.rdbLynx.Name = "rdbLynx";
-            this.rdbLynx.Size = new System.Drawing.Size(47, 17);
-            this.rdbLynx.TabIndex = 2;
-            this.rdbLynx.Text = "Lynx";
-            this.rdbLynx.UseVisualStyleBackColor = false;
+            this.btnSchrijfWijzes.Location = new System.Drawing.Point(4, 39);
+            this.btnSchrijfWijzes.Name = "btnSchrijfWijzes";
+            this.btnSchrijfWijzes.Size = new System.Drawing.Size(99, 23);
+            this.btnSchrijfWijzes.TabIndex = 0;
+            this.btnSchrijfWijzes.Text = "schrijf wijzes";
+            this.btnSchrijfWijzes.UseVisualStyleBackColor = true;
+            this.btnSchrijfWijzes.Click += new System.EventHandler(this.btnSchrijfWijzes_Click);
             // 
-            // rdbKoe
+            // pnlDeligateToepassing
             // 
-            this.rdbKoe.AutoSize = true;
-            this.rdbKoe.BackColor = System.Drawing.Color.BurlyWood;
-            this.rdbKoe.Location = new System.Drawing.Point(7, 44);
-            this.rdbKoe.Name = "rdbKoe";
-            this.rdbKoe.Size = new System.Drawing.Size(44, 17);
-            this.rdbKoe.TabIndex = 1;
-            this.rdbKoe.Text = "Koe";
-            this.rdbKoe.UseVisualStyleBackColor = false;
+            this.pnlDeligateToepassing.Controls.Add(this.progressbar);
+            this.pnlDeligateToepassing.Controls.Add(this.lblTussenResultaat);
+            this.pnlDeligateToepassing.Controls.Add(this.lblTerugMelding);
+            this.pnlDeligateToepassing.Controls.Add(this.btnTerugMelding);
+            this.pnlDeligateToepassing.Location = new System.Drawing.Point(22, 253);
+            this.pnlDeligateToepassing.Name = "pnlDeligateToepassing";
+            this.pnlDeligateToepassing.Size = new System.Drawing.Size(281, 208);
+            this.pnlDeligateToepassing.TabIndex = 1;
             // 
-            // rdbKonijn
+            // btnTerugMelding
             // 
-            this.rdbKonijn.AutoSize = true;
-            this.rdbKonijn.BackColor = System.Drawing.Color.BurlyWood;
-            this.rdbKonijn.Checked = true;
-            this.rdbKonijn.Location = new System.Drawing.Point(7, 20);
-            this.rdbKonijn.Name = "rdbKonijn";
-            this.rdbKonijn.Size = new System.Drawing.Size(54, 17);
-            this.rdbKonijn.TabIndex = 0;
-            this.rdbKonijn.TabStop = true;
-            this.rdbKonijn.Text = "Konijn";
-            this.rdbKonijn.UseVisualStyleBackColor = false;
+            this.btnTerugMelding.Location = new System.Drawing.Point(13, 24);
+            this.btnTerugMelding.Name = "btnTerugMelding";
+            this.btnTerugMelding.Size = new System.Drawing.Size(221, 23);
+            this.btnTerugMelding.TabIndex = 0;
+            this.btnTerugMelding.Text = "Langdurige berkening";
+            this.btnTerugMelding.UseVisualStyleBackColor = true;
+            this.btnTerugMelding.Click += new System.EventHandler(this.btnTerugMelding_Click);
             // 
-            // grbPlanten
+            // lblTerugMelding
             // 
-            this.grbPlanten.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.grbPlanten.BackColor = System.Drawing.Color.PaleGreen;
-            this.grbPlanten.Controls.Add(this.chbZaai);
-            this.grbPlanten.Controls.Add(this.rdbVingerhoedskruid);
-            this.grbPlanten.Controls.Add(this.rdbVenijnboom);
-            this.grbPlanten.Controls.Add(this.rdbGras);
-            this.grbPlanten.Location = new System.Drawing.Point(12, 210);
-            this.grbPlanten.Name = "grbPlanten";
-            this.grbPlanten.Size = new System.Drawing.Size(119, 169);
-            this.grbPlanten.TabIndex = 1;
-            this.grbPlanten.TabStop = false;
-            this.grbPlanten.Text = "Planten";
+            this.lblTerugMelding.AutoSize = true;
+            this.lblTerugMelding.Location = new System.Drawing.Point(10, 83);
+            this.lblTerugMelding.Name = "lblTerugMelding";
+            this.lblTerugMelding.Size = new System.Drawing.Size(80, 17);
+            this.lblTerugMelding.TabIndex = 1;
+            this.lblTerugMelding.Text = "percentage";
             // 
-            // chbZaai
+            // lblTussenResultaat
             // 
-            this.chbZaai.AutoSize = true;
-            this.chbZaai.Location = new System.Drawing.Point(62, 20);
-            this.chbZaai.Name = "chbZaai";
-            this.chbZaai.Size = new System.Drawing.Size(47, 17);
-            this.chbZaai.TabIndex = 3;
-            this.chbZaai.Text = "Zaai";
-            this.chbZaai.UseVisualStyleBackColor = true;
+            this.lblTussenResultaat.AutoSize = true;
+            this.lblTussenResultaat.Location = new System.Drawing.Point(10, 131);
+            this.lblTussenResultaat.Name = "lblTussenResultaat";
+            this.lblTussenResultaat.Size = new System.Drawing.Size(110, 17);
+            this.lblTussenResultaat.TabIndex = 2;
+            this.lblTussenResultaat.Text = "Tussenresultaat";
             // 
-            // rdbVingerhoedskruid
+            // progressbar
             // 
-            this.rdbVingerhoedskruid.AutoSize = true;
-            this.rdbVingerhoedskruid.Location = new System.Drawing.Point(6, 65);
-            this.rdbVingerhoedskruid.Name = "rdbVingerhoedskruid";
-            this.rdbVingerhoedskruid.Size = new System.Drawing.Size(107, 17);
-            this.rdbVingerhoedskruid.TabIndex = 2;
-            this.rdbVingerhoedskruid.TabStop = true;
-            this.rdbVingerhoedskruid.Text = "Vingerhoedskruid";
-            this.rdbVingerhoedskruid.UseVisualStyleBackColor = true;
-            // 
-            // rdbVenijnboom
-            // 
-            this.rdbVenijnboom.AutoSize = true;
-            this.rdbVenijnboom.Location = new System.Drawing.Point(6, 42);
-            this.rdbVenijnboom.Name = "rdbVenijnboom";
-            this.rdbVenijnboom.Size = new System.Drawing.Size(80, 17);
-            this.rdbVenijnboom.TabIndex = 1;
-            this.rdbVenijnboom.TabStop = true;
-            this.rdbVenijnboom.Text = "Venijnboom";
-            this.rdbVenijnboom.UseVisualStyleBackColor = true;
-            // 
-            // rdbGras
-            // 
-            this.rdbGras.AutoSize = true;
-            this.rdbGras.Location = new System.Drawing.Point(6, 19);
-            this.rdbGras.Name = "rdbGras";
-            this.rdbGras.Size = new System.Drawing.Size(47, 17);
-            this.rdbGras.TabIndex = 0;
-            this.rdbGras.TabStop = true;
-            this.rdbGras.Text = "Gras";
-            this.rdbGras.UseVisualStyleBackColor = true;
-            // 
-            // Label1
-            // 
-            this.Label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(505, 12);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(56, 13);
-            this.Label1.TabIndex = 4;
-            this.Label1.Text = "Natuurinfo";
-            // 
-            // lblInformatie
-            // 
-            this.lblInformatie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblInformatie.Location = new System.Drawing.Point(483, 31);
-            this.lblInformatie.Name = "lblInformatie";
-            this.lblInformatie.Size = new System.Drawing.Size(103, 173);
-            this.lblInformatie.TabIndex = 0;
-            // 
-            // pbWereld
-            // 
-            this.pbWereld.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbWereld.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbWereld.Location = new System.Drawing.Point(137, 12);
-            this.pbWereld.Name = "pbWereld";
-            this.pbWereld.Size = new System.Drawing.Size(340, 367);
-            this.pbWereld.TabIndex = 6;
-            this.pbWereld.TabStop = false;
-            this.pbWereld.Click += new System.EventHandler(this.pbWereld_Click);
-            this.pbWereld.MouseClick += new MouseEventHandler(this.pbWereld_MouseClick);
-            // 
-            // pnlKnoppen
-            // 
-            this.pnlKnoppen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlKnoppen.Controls.Add(this.btnEinde);
-            this.pnlKnoppen.Controls.Add(this.hsbSnelheid);
-            this.pnlKnoppen.Controls.Add(this.label2);
-            this.pnlKnoppen.Location = new System.Drawing.Point(486, 210);
-            this.pnlKnoppen.Name = "pnlKnoppen";
-            this.pnlKnoppen.Size = new System.Drawing.Size(100, 169);
-            this.pnlKnoppen.TabIndex = 0;
-            // 
-            // btnEinde
-            // 
-            this.btnEinde.Location = new System.Drawing.Point(22, 143);
-            this.btnEinde.Name = "btnEinde";
-            this.btnEinde.Size = new System.Drawing.Size(75, 23);
-            this.btnEinde.TabIndex = 10;
-            this.btnEinde.Text = "Einde";
-            this.btnEinde.UseVisualStyleBackColor = true;
-            // 
-            // hsbSnelheid
-            // 
-            this.hsbSnelheid.Location = new System.Drawing.Point(22, 130);
-            this.hsbSnelheid.Name = "hsbSnelheid";
-            this.hsbSnelheid.Size = new System.Drawing.Size(80, 17);
-            this.hsbSnelheid.TabIndex = 9;
-            this.hsbSnelheid.Value = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Snelheid";
-            this.label2.UseCompatibleTextRendering = true;
+            this.progressbar.Location = new System.Drawing.Point(4, 174);
+            this.progressbar.Name = "progressbar";
+            this.progressbar.Size = new System.Drawing.Size(264, 23);
+            this.progressbar.TabIndex = 3;
             // 
             // FrmNatSim
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(598, 391);
-            this.Controls.Add(this.pnlKnoppen);
-            this.Controls.Add(this.pbWereld);
-            this.Controls.Add(this.Label1);
-            this.Controls.Add(this.lblInformatie);
-            this.Controls.Add(this.grbPlanten);
-            this.Controls.Add(this.grbDieren);
+            this.ClientSize = new System.Drawing.Size(318, 563);
+            this.Controls.Add(this.pnlDeligateToepassing);
+            this.Controls.Add(this.pnlDeligateAanmaken);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmNatSim";
             this.Text = "Form1";
-            this.grbDieren.ResumeLayout(false);
-            this.grbDieren.PerformLayout();
-            this.grbPlanten.ResumeLayout(false);
-            this.grbPlanten.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWereld)).EndInit();
-            this.pnlKnoppen.ResumeLayout(false);
-            this.pnlKnoppen.PerformLayout();
+            this.pnlDeligateAanmaken.ResumeLayout(false);
+            this.pnlDeligateAanmaken.PerformLayout();
+            this.pnlDeligateToepassing.ResumeLayout(false);
+            this.pnlDeligateToepassing.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbDieren;
-        private System.Windows.Forms.RadioButton rdbBeer;
-        private System.Windows.Forms.RadioButton rdbLynx;
-        private System.Windows.Forms.RadioButton rdbKoe;
-        private System.Windows.Forms.RadioButton rdbKonijn;
-        private System.Windows.Forms.GroupBox grbPlanten;
-        private System.Windows.Forms.CheckBox chbZaai;
-        private System.Windows.Forms.RadioButton rdbVingerhoedskruid;
-        private System.Windows.Forms.RadioButton rdbVenijnboom;
-        private System.Windows.Forms.RadioButton rdbGras;
-        private System.Windows.Forms.Label Label1;
-        private System.Windows.Forms.Label lblInformatie;
-        private System.Windows.Forms.PictureBox pbWereld;
-        private System.Windows.Forms.Panel pnlKnoppen;
-        private System.Windows.Forms.Button btnEinde;
-        private System.Windows.Forms.HScrollBar hsbSnelheid;
-        private System.Windows.Forms.Label label2;
+        private Panel pnlDeligateAanmaken;
+        private TextBox txtUitvoerGetallen;
+        private Button btnSchrijfWijzes;
+        private Panel pnlDeligateToepassing;
+        private Button btnTerugMelding;
+        private Label lblTussenResultaat;
+        private Label lblTerugMelding;
+        private ProgressBar progressbar;
     }
 }
 
