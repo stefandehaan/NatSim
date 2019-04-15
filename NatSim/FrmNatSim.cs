@@ -10,53 +10,43 @@ using System.Windows.Forms;
 
 namespace NatSim
 {
-
-    public delegate void TerugMelding(string boodschap, long tussenresultaat, int percentage);
+    public delegate void Callback(int progress);
 
     public partial class FrmNatSim : Form {
+        Timer current = null;
 
         public FrmNatSim() {
 
             InitializeComponent();
         }
 
-        public delegate void SchrijfDeligate(int getal);
-
-        public void SchrijfGetal(int getal) {
-            txtUitvoerGetallen.Text = txtUitvoerGetallen.Text + String.Format("Getal: {0, -12:N0}", getal) + "\r\n";
+        private void submit_Click(object sender, EventArgs e) {
+            this.setTimer(this.tracker);
         }
 
-        public void SchrijfGeld(int geld) {
-            txtUitvoerGetallen.Text = txtUitvoerGetallen.Text + String.Format("Geld: {0:C}", geld) + "\r\n";
+        private void tracker(int process) {
+            this.progress.Value = process;
+            if (process == 80)
+                this.BackColor = Color.Orange;
+
+            if (process == 90)
+                this.BackColor = Color.Red;
+
+            if (process == 100)
+                this.current.Stop();
         }
 
-        public void SchrijfVoorloopnullen(int getal) {
-            txtUitvoerGetallen.Text = txtUitvoerGetallen.Text + String.Format("Voorloopnullen: {0:C}", getal) + "\r\n";
-        }
+        private void setTimer(Callback callback) {
 
-        private void btnSchrijfWijzes_Click(object sender, EventArgs e) {
-            SchrijfDeligate schrijfDeligate = SchrijfGetal;
-            schrijfDeligate(10000);
-            schrijfDeligate(200);
+            void ticker(object sender, EventArgs e) {
+                callback(this.progress.Value + 1);
+            }
 
-            schrijfDeligate = SchrijfGeld;
-            schrijfDeligate(10000);
-            schrijfDeligate(200);
-
-            schrijfDeligate = SchrijfVoorloopnullen;
-            schrijfDeligate.Invoke(10000);
-            schrijfDeligate.Invoke(200);
-        }
-
-        public void Melding(string meldingenText, long totaal, int percentage) {
-            lblTerugMelding.Text = meldingenText;
-            lblTussenResultaat.Text = "Tussenresultaat:" + totaal.ToString();
-            progressbar.Value = percentage;
-            this.Refresh();
-        }
-
-        private void btnTerugMelding_Click(object sender, EventArgs e) {
-            lblTerugMelding.Text = "Totaal: " + Berekeningen.LangeBerekining(Melding);
+            Timer timer = new Timer();
+            timer.Tick += new EventHandler(ticker);
+            timer.Interval = (int)Math.Ceiling((this.input.Value * 60_000) / 100);
+            timer.Start();
+            this.current = timer;
         }
     }
 }
